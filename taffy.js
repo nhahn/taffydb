@@ -1326,8 +1326,10 @@ var TAFFY, exports, T;
             }
 
             RC++;
-            v.___id = 'T' + String( idpad + TC ).slice( -6 ) + 'R' +
-              String( idpad + RC ).slice( -6 );
+            if (!v.___id) {
+              v.___id = 'T' + String( idpad + TC ).slice( -6 ) + 'R' +
+                String( idpad + RC ).slice( -6 );
+            }
             v.___s = true;
             records.push( v.___id );
             if ( settings.template ){
